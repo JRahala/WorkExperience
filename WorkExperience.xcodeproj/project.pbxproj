@@ -15,6 +15,8 @@
 		32F3C36A2733F021005543AA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 32F3C3542733F021005543AA /* Assets.xcassets */; };
 		32F3C3782733F26E005543AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3C3772733F26E005543AA /* User.swift */; };
 		32F3C3792733F26E005543AA /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3C3772733F26E005543AA /* User.swift */; };
+		32F3C38B2733F402005543AA /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3C38A2733F402005543AA /* Topic.swift */; };
+		32F3C38C2733F402005543AA /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32F3C38A2733F402005543AA /* Topic.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +29,7 @@
 		32F3C3632733F021005543AA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		32F3C3642733F021005543AA /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		32F3C3772733F26E005543AA /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		32F3C38A2733F402005543AA /* Topic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +109,7 @@
 			isa = PBXGroup;
 			children = (
 				32F3C3772733F26E005543AA /* User.swift */,
+				32F3C38A2733F402005543AA /* Topic.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -208,6 +212,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32F3C3672733F021005543AA /* ContentView.swift in Sources */,
+				32F3C38B2733F402005543AA /* Topic.swift in Sources */,
 				32F3C3652733F021005543AA /* WorkExperienceApp.swift in Sources */,
 				32F3C3782733F26E005543AA /* User.swift in Sources */,
 			);
@@ -218,6 +223,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				32F3C3682733F021005543AA /* ContentView.swift in Sources */,
+				32F3C38C2733F402005543AA /* Topic.swift in Sources */,
 				32F3C3662733F021005543AA /* WorkExperienceApp.swift in Sources */,
 				32F3C3792733F26E005543AA /* User.swift in Sources */,
 			);

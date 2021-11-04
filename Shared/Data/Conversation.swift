@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Conversation class
 class Conversation{
     var owner: User
     var recipient: [User]

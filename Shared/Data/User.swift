@@ -7,8 +7,8 @@
 
 import Foundation
 
+// User class
 class User{
-    
     let id: UUID
     var firstName: String
     var lastName: String
@@ -20,5 +20,17 @@ class User{
     }
 }
 
+// Student class
+class Student: User{
+    override init(firstName: String, lastName: String){
+        super.init(firstName: firstName, lastName: lastName)
+    }
+}
 
+// Teacher class
+class Teacher: User{
+    override init(firstName: String, lastName: String){
+        super.init(firstName: firstName, lastName: lastName)
+    }
+}
 

@@ -7,6 +7,7 @@
 
 import Foundation
 
+// Topic enumerables for placements
 enum Topic{
     case Accounting
     case Engineering

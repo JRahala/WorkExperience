@@ -29,8 +29,17 @@ class Student: User{
 
 // Employee class
 class Employee: User{
+    var placements: [Placement] = []
+    
     override init(firstName: String, lastName: String){
         super.init(firstName: firstName, lastName: lastName)
+    }
+    
+    // Create, append, return new placement (given title, description) to self.placements array
+    func createNewPlacement(title: String, description: String) -> Placement{
+        let newPlacement = Placement(title: title, description: description, author: self)
+        self.placements.append(newPlacement)
+        return newPlacement
     }
 }
 
@@ -40,4 +49,5 @@ class Teacher: User{
         super.init(firstName: firstName, lastName: lastName)
     }
 }
+
 

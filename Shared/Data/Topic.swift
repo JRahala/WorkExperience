@@ -37,9 +37,10 @@ enum RegionTag{
 
 enum Tag{
     case RegionTag(RegionTag)
-    case SubjectTag(SubjectTag)
+    case SubjectTag([SubjectTag])
     case DateTag(DateRange)
-    case DetailsTag(String)
+    case MiscellaneousTag([String])
 }
+
 
 

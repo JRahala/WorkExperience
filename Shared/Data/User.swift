@@ -61,6 +61,11 @@ class Employee: User{
         }
         return false
     }
+    
+    // toggle tags in placements
+    func togglePlacementTag(placement: Placement, tag: Tag){
+        continue
+    }
 }
 
 // Teacher class

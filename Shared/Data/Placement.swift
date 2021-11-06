@@ -12,13 +12,13 @@ class Placement{
     var title: String
     var description: String
     var author: Employee
-    var topics: [Topic]
+    var tags: [Tag]
     
     init(title: String, description: String, author: Employee){
         self.title = title
         self.description = description
         self.author = author
-        self.topics = [Topic]()
+        self.tags = [Tag]()
     }
 }
 

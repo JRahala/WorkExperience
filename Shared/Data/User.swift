@@ -49,7 +49,18 @@ class Employee: User{
         return placement
     }
     
-    
+    // returns True if placement exists in placements array and is deleted, else returns False
+    func deletePlacement(placement: Placement) -> Bool{
+        var index: Int = 0
+        while (index < self.placements.count){
+            if (self.placements[index] === placement){
+                self.placements.remove(at: index)
+                return true
+            }
+            index += 1
+        }
+        return false
+    }
 }
 
 // Teacher class

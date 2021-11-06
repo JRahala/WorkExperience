@@ -7,11 +7,39 @@
 
 import Foundation
 
-// Topic enumerables for placements
-enum Topic{
+// Subject enumerables (plural)
+enum SubjectTag{
     case Accounting
     case Engineering
     case DataScience
     case Investing
 }
+
+// Region enumerables (singular)
+enum RegionTag{
+    case Bedford
+    case Berkshire
+    case Cambridge
+    case Cheshire
+    case London
+    case Derby
+    case Devon
+    case Essex
+    case Hampshire
+    case Lancashire
+    case Leicestershire
+    case Norfolk
+    case Oxford
+    case Suffolk
+    case Warwick
+    case Worcestershire
+}
+
+enum Tag{
+    case RegionTag(RegionTag)
+    case SubjectTag(SubjectTag)
+    case DateTag(DateRange)
+    case DetailsTag(String)
+}
+
 

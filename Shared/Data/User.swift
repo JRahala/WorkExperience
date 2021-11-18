@@ -29,9 +29,10 @@ class Student: User{
 
 // Employee class
 class Employee: User{
-    var placements: [Placement] = []
+    var placements: [Placement]
     
     override init(firstName: String, lastName: String){
+        self.placements = [Placement]()
         super.init(firstName: firstName, lastName: lastName)
     }
     
@@ -62,10 +63,7 @@ class Employee: User{
         return false
     }
     
-    // toggle tags in placements
-    func togglePlacementTag(placement: Placement, tag: Tag){
-        continue
-    }
+
 }
 
 // Teacher class
@@ -74,5 +72,3 @@ class Teacher: User{
         super.init(firstName: firstName, lastName: lastName)
     }
 }
-
-

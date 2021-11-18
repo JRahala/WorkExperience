@@ -12,13 +12,45 @@ class Placement{
     var title: String
     var description: String
     var author: Employee
-    var tags: [Tag]
+    
+    // tag attributes
+    var regionTag: String
+    var dateTag: DateRange
+    var subjectTags: Set<String>
+    var miscellaneousTags: Set<String>
     
     init(title: String, description: String, author: Employee){
         self.title = title
         self.description = description
         self.author = author
-        self.tags = [Tag]()
+        self.regionTag = "Berkshire"
+        self.dateTag = DateRange(startDate: Date(day: 1, month: 1, year: 1), finishDate: Date(day: 2, month: 1, year: 1))
+        self.subjectTags = Set<String>()
+        self.miscellaneousTags = Set<String>()
+    }
+    
+    // set the region tag to new regionTag
+    func toggleRegionTag(regionTag: String){
+        self.regionTag = regionTag
+    }
+
+    // set the date tag to the new dateTag
+    func toggleDateTag(dateTag: DateRange){
+        self.dateTag = dateTag
+    }
+    
+    // add / remove subject tag
+    func toggleSubjectTag(subjectTag: String){
+        if (self.subjectTags.remove(subjectTag) == nil){
+            self.subjectTags.insert(subjectTag)
+        }
+    }
+    
+    // add / remove miscellaneous tag
+    func toggleMiscellaneousTag(miscellaneousTag: String){
+        if (self.miscellaneousTags.remove(miscellaneousTag) == nil){
+            self.miscellaneousTags.insert(miscellaneousTag)
+        }
     }
 }
 

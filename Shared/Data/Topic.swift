@@ -8,39 +8,12 @@
 import Foundation
 
 // Subject enumerables (plural)
-enum SubjectTag{
-    case Accounting
-    case Engineering
-    case DataScience
-    case Investing
-}
+let SUBJECT_TAGS = ["Accounting", "Engineering", "DataScience", "Investing"]
 
 // Region enumerables (singular)
-enum RegionTag{
-    case Bedford
-    case Berkshire
-    case Cambridge
-    case Cheshire
-    case London
-    case Derby
-    case Devon
-    case Essex
-    case Hampshire
-    case Lancashire
-    case Leicestershire
-    case Norfolk
-    case Oxford
-    case Suffolk
-    case Warwick
-    case Worcestershire
-}
+let REGION_TAGS = ["Bedford", "Berkshire", "Cambridge", "Cheshire", "London", "Derby", "Devon", "Essex", "Hampshire", "Lancashire", "Leicestershire", "Norfolk", "Oxford", "Suffolk", "Warwick", "Worcestershire"]
 
-enum Tag{
-    case RegionTag(RegionTag)
-    case SubjectTag([SubjectTag])
-    case DateTag(DateRange)
-    case MiscellaneousTag([String])
-}
-
+// Date tags are intialised using the DateRange class
+// Miscellaneous tags are added using Strings
 
 

@@ -116,8 +116,8 @@
 			children = (
 				32F3C3772733F26E005543AA /* User.swift */,
 				32F3C38A2733F402005543AA /* Topic.swift */,
-				32F3C38F2733F43D005543AA /* Conversation.swift */,
 				32F3C3942733F674005543AA /* Placement.swift */,
+				32F3C38F2733F43D005543AA /* Conversation.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";

@@ -8,7 +8,7 @@
 import Foundation
 
 // User class
-class User{
+class User: Equatable, Hashable{
     let id: UUID
     var firstName: String
     var lastName: String
@@ -18,21 +18,47 @@ class User{
         self.firstName = firstName
         self.lastName = lastName
     }
+    
+    func hash(into hasher: inout Hasher){
+        hasher.combine(self.id)
+    }
+    
+    static func ==(lhs: User, rhs: User) -> Bool{
+        return lhs.id == rhs.id
+    }
+
 }
+
 
 // Student class
 class Student: User{
+    var following: Set<Employee>
+    
     override init(firstName: String, lastName: String){
+        self.following = Set<Employee>()
         super.init(firstName: firstName, lastName: lastName)
+    }
+    
+    // insert / remove employee from following set
+    func toggleFollowingEmployee(employee: Employee){
+        if (self.following.contains(employee)){
+            self.following.remove(employee)
+            employee.followers.remove(self)
+        } else {
+            self.following.insert(employee)
+            employee.followers.insert(self)
+        }
     }
 }
 
 // Employee class
 class Employee: User{
     var placements: [Placement]
+    var followers: Set<Student> // set of followers, so that notifications can be dispatched to all followers
     
     override init(firstName: String, lastName: String){
         self.placements = [Placement]()
+        self.followers = Set<Student>()
         super.init(firstName: firstName, lastName: lastName)
     }
     
@@ -68,7 +94,35 @@ class Employee: User{
 
 // Teacher class
 class Teacher: User{
+    var classes: [String: Set<Student>]
+    
     override init(firstName: String, lastName: String){
+        self.classes = [String: Set<Student>]()
         super.init(firstName: firstName, lastName: lastName)
     }
+    
+    // generate a class, returns false if class is already used
+    func generateClass(className: String, classStudents: Set<Student>) -> Bool{
+        if (self.classes.keys.contains(className)){
+            return false
+        }
+        self.classes[className] = classStudents
+        return true
+    }
+    
+    // delete a class
+    func deleteClass(className: String){
+        self.classes[className] = nil
+    }
+    
+    // toggle student in / out class set
+    func toggleStudentClass(className: String, classStudent: Student){
+        if (self.classes[className]!.contains(classStudent)){
+            self.classes[className]!.insert(classStudent)
+        } else {
+            self.classes[className]!.remove(classStudent)
+        }
+    }
+    
+    
 }

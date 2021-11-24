@@ -49,6 +49,16 @@ class Student: User{
             employee.followers.insert(self)
         }
     }
+    
+    // toggle interest in a placement
+    func toggleInterestPlacement(placement: Placement){
+        if (placement.interestedStudents.contains(self)){
+            placement.interestedStudents.remove(self)
+        } else {
+            placement.interestedStudents.insert(self)
+        }
+    }
+    
 }
 
 // Employee class

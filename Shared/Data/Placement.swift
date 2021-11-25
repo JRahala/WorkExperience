@@ -54,6 +54,16 @@ class Placement{
             self.miscellaneousTags.insert(miscellaneousTag)
         }
     }
+    
+    // static method to sort placements in place by tag (inplace)
+    static func sortPlacements(placements: inout [Placement]){
+        return
+    }
+    
+    // filter placements by tag (inplace)
+    static func filterPlacements(placements: inout [Placement]){
+        return
+    }
 }
 
 // Days in a month
